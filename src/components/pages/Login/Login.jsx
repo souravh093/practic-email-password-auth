@@ -27,7 +27,7 @@ const Login = () => {
         setSuccess("Successfully logged in");
       })
       .catch((error) => {
-        setError(error);
+        setError(error.message);
       });
   };
 
@@ -83,13 +83,12 @@ const Login = () => {
         <div className="flex items-center justify-between">
           <input type="submit" value="Login" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" />
           <div>
-            <Link
+            <p
               onClick={passwordResetEmailSend}
-              to="/"
               className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
             >
               Forgot Password?
-            </Link>
+            </p>
             <span className="text-gray-600"> | </span>
             <Link
               to="/register"
