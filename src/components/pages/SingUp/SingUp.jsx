@@ -61,7 +61,9 @@ const SingUp = () => {
 
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleTogglePassword = () => {
+  const handleTogglePassword = (event) => {
+    event.preventDefault();
+    event.stopPropagation()
     setShowPassword(!showPassword);
   };
 

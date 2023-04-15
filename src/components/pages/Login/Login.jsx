@@ -47,7 +47,9 @@ const Login = () => {
 
   const [showPassword, setPassword] = useState(false)
 
-  const handleShowPassword = () => {
+  const handleShowPassword = (event) => {
+    event.preventDefault();
+    event.stopPropagation()
     setPassword(!showPassword)
   }
 
