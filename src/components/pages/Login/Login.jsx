@@ -32,6 +32,8 @@ const Login = () => {
   };
 
   const passwordResetEmailSend = () => {
+    setError('')
+    setSuccess('')
     const email = emailRef.current.value;
     if (!email) {
       alert("Please enter a valid email");
